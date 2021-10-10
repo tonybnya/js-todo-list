@@ -1,0 +1,205 @@
+/*
+===============
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+===============
+Variables
+===============
+*/
+:root {
+    --clr-black: #222;
+    --clr-grey: hsl(205, 100%, 96%);
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-primary: hsl(205, 78%, 60%);
+    --clr-primary-1: hsl(205, 63%, 48%);
+    --clr-primary-2: hsl(205, 90%, 76%);
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-secondary: hsl(205, 86%, 17%);
+    --clr-white: #fff;
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --fixed-width: 620px;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --radius: 0.25rem;
+    --spacing: 0.1rem;
+    --transition: all 0.3s linear;
+}
+
+/*
+===============
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--ff-primary);
+    background: var(--clr-grey);
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+h2 {
+    letter-spacing: var(--spacing);
+    text-transform: uppercase;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-primary);
+    font-size: 2rem;
+}
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+}
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/*
+===============
+Navbar
+===============
+*/
+nav {
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+}
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.nav-toggle {
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.nav-toggle:hover {
+    color: var(--clr-secondary);
+    transition: rotate(90deg);
+}
+.logo {
+    height: 40px;
+}
+.social-icons {
+    display: none;
+}
+@media screen and (min-width: 800px) {
+    .nav-center {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .nav-header {
+        padding: 0;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .social-icons {
+        display: flex;
+    }
+    .social-icons a {
+        margin: 0 0.5rem;
+        color: var(--clr-primary-1);
+        transition: var(--transition);
+    }
+    .social-icons a:hover {
+        color: var(--clr-primary-2);
+    }
+}
+
+/*
+===============
+Container
+===============
+*/
+main {
+    min-height: calc(100vh - 20rem);
+    display: grid;
+    place-items: center;
+}
+.container {
+    text-align: center;
+}
+.container h2 {
+    background: var(--clr-black);
+    color: var(--clr-primary);
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+}
+#btn, .inp {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: var(--radius);
+}
+.btn-hero {
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    letter-spacing: var(--spacing);
+    display: inline-block;
+    font-weight: 700;
+    transition: var(--transition);
+    border: 2px solid var(--clr-primary);
+    border-radius: var(--radius);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    padding: 0.1px 10px;
+}
+
+.btn-hero:hover {
+    color: var(--clr-white);
+    background: var(--clr-black);
+}
+.todolist {
+    display: flex;
+}
+.items {
+    display: flex;
+}
+.close-btn {
+    font-size: 1rem;
+    background: transparent;
+    border-color: transparent;
+    color: var(--clr-red-dark);
+    transition: var(--transition);
+    cursor: pointer;
+}
+.close-btn:hover {
+    color: var(--clr-red-light);
+    transform: rotate(360deg);
+}
