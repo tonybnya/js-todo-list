@@ -50,12 +50,6 @@ body {
     line-height: 1.5;
     font-size: 0.875rem;
 }
-ul {
-    list-style-type: none;
-}
-a {
-    text-decoration: none;
-}
 h2 {
     letter-spacing: var(--spacing);
     text-transform: uppercase;
@@ -94,23 +88,8 @@ nav {
     justify-content: space-between;
     padding: 1rem;
 }
-.nav-toggle {
-    font-size: 1.5rem;
-    color: var(--clr-primary);
-    background: transparent;
-    border-color: transparent;
-    transition: var(--transition);
-    cursor: pointer;
-}
-.nav-toggle:hover {
-    color: var(--clr-secondary);
-    transition: rotate(90deg);
-}
 .logo {
     height: 40px;
-}
-.social-icons {
-    display: none;
 }
 @media screen and (min-width: 800px) {
     .nav-center {
@@ -123,20 +102,6 @@ nav {
     }
     .nav-header {
         padding: 0;
-    }
-    .nav-toggle {
-        display: none;
-    }
-    .social-icons {
-        display: flex;
-    }
-    .social-icons a {
-        margin: 0 0.5rem;
-        color: var(--clr-primary-1);
-        transition: var(--transition);
-    }
-    .social-icons a:hover {
-        color: var(--clr-primary-2);
     }
 }
 
@@ -160,7 +125,7 @@ main {
     border-radius: var(--radius);
     margin-bottom: 0.5rem;
 }
-#btn, .inp {
+#inp {
     border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: var(--radius);
 }
@@ -180,26 +145,27 @@ main {
     font-size: 1rem;
     padding: 0.1px 10px;
 }
-
 .btn-hero:hover {
     color: var(--clr-white);
     background: var(--clr-black);
 }
-.todolist {
+.todo-list {
     display: flex;
 }
 .items {
     display: flex;
 }
-.close-btn {
+p {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: var(--ff-secondary);
+    color: var(--clr-primary-2);
+    font-weight: 700;
     font-size: 1rem;
-    background: transparent;
-    border-color: transparent;
-    color: var(--clr-red-dark);
-    transition: var(--transition);
     cursor: pointer;
 }
-.close-btn:hover {
-    color: var(--clr-red-light);
-    transform: rotate(360deg);
+p:nth-child(odd) {
+    color: var(--clr-primary-1);
 }
